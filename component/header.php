@@ -114,8 +114,12 @@
                     <div class="site-config" style="background-image:url(<?php $this->options->backGroundImage ? $this->options->backGroundImage() : CDNUrl('assert/img/banner.jpg') ?>)">
                         <div class="site-config-wrap">
                             <div class="animated">
-                                <h2 class="site-title"><?php $this->options->title() ?></h2>
-                                <span class="site-meta"><?php $this->options->description() ?></span>
+								<?php if (!empty($this->options->StyleSettings) && in_array('Title', $this->options->StyleSettings)) : ?>
+									<h2 class="site-title"><?php $this->options->title() ?></h2>
+								<?php endif; ?>
+                                <?php if (!empty($this->options->StyleSettings) && in_array('Description', $this->options->StyleSettings)) : ?>
+									<span class="site-meta"><?php $this->options->description() ?></span>
+								<?php endif; ?>
                             </div>
                         </div>
                     </div>

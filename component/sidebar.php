@@ -44,7 +44,35 @@
                                 </a>
                             </li>
                         <?php endif; ?>
-                        <li>
+						<?php if ($this->options->SoundCloudLink) : ?>
+                            <li>
+                                <a href="<?php $this->options->SoundCloudLink(); ?>" title="SoundCloud" alt="SoundCloud" aria-label="SoundCloud">
+									<i class="iconfont jello-horizontal icon-soundcloud"></i>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+						<?php if ($this->options->SteamLink) : ?>
+                            <li>
+                                <a href="<?php $this->options->SteamLink(); ?>" title="Steam" alt="Steam" aria-label="Steam">
+									<i class="iconfont jello-horizontal icon-steam"></i>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+						<?php if ($this->options->YoutubeLink) : ?>
+                            <li>
+                                <a href="<?php $this->options->YoutubeLink(); ?>" title="Youtube" alt="Youtube" aria-label="Youtube">
+									<i class="iconfont jello-horizontal icon-youtube"></i>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+						<?php if ($this->options->BiliBiliLink) : ?>
+                            <li>
+                                <a href="<?php $this->options->BiliBiliLink(); ?>" title="哔哩哔哩" alt="哔哩哔哩" aria-label="哔哩哔哩">
+									<i class="iconfont jello-horizontal icon-bilibili"></i>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+						<li>
                             <a href="<?php $this->options->feedUrl(); ?>" title="RSS" alt="RSS" aria-label="RSS">
                                 <i class="iconfont jello-horizontal icon-rss"></i>
                             </a>

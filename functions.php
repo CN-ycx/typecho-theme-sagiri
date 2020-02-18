@@ -27,23 +27,33 @@ function themeConfig($form)
     $form->addInput($TwitterLink);
     $QQLink = new Typecho_Widget_Helper_Form_Element_Text('QQLink', NULL, NULL, _t('QQ'), _i18n('请填入完整链接'));
     $form->addInput($QQLink);
+	$SoundCloudLink = new Typecho_Widget_Helper_Form_Element_Text('SoundCloudLink', NULL, NULL, _t('SoundCloud'), _i18n('请填入完整链接'));
+    $form->addInput($SoundCloudLink);
+	$SteamLink = new Typecho_Widget_Helper_Form_Element_Text('SteamLink', NULL, NULL, _t('Steam'), _i18n('请填入完整链接'));
+    $form->addInput($SteamLink);
+	$YoutubeLink = new Typecho_Widget_Helper_Form_Element_Text('YoutubeLink', NULL, NULL, _t('Youtube'), _i18n('请填入完整链接'));
+    $form->addInput($YoutubeLink);
+	$BiliBiliLink = new Typecho_Widget_Helper_Form_Element_Text('BiliBiliLink', NULL, NULL, _t('哔哩哔哩'), _i18n('请填入完整链接'));
+    $form->addInput($BiliBiliLink);
 
     $WechatQR = new Typecho_Widget_Helper_Form_Element_Text('WechatQR', NULL, NULL, _i18n('微信二维码'), _i18n('请填入完整二维码图片链接'));
     $form->addInput($WechatQR);
     $AlipayQR = new Typecho_Widget_Helper_Form_Element_Text('AlipayQR', NULL, NULL, _i18n('支付宝二维码'), _i18n('请填入完整二维码图片链接'));
     $form->addInput($AlipayQR);
 
-    $customCss = new Typecho_Widget_Helper_Form_Element_Textarea('customCss', NULL, NULL, _t('Custom CSS Code'), _i18n('需要 `style` 标签'));
+    $customCss = new Typecho_Widget_Helper_Form_Element_Textarea('customCss', NULL, NULL, _t('自定义 CSS 代码'), _i18n('需要 `style` 标签'));
     $form->addInput($customCss);
-    $customScript = new Typecho_Widget_Helper_Form_Element_Textarea('customScript', NULL, NULL, _t('Custom JS Code ( eg：Google Analytics Code ) '), _i18n('不需要 `script` 标签'));
+    $customScript = new Typecho_Widget_Helper_Form_Element_Textarea('customScript', NULL, NULL, _t('自定义 JS 代码（例如：Google 统计代码）'), _i18n('不需要 `script` 标签'));
     $form->addInput($customScript);
 
     $StyleSettings = new Typecho_Widget_Helper_Form_Element_Checkbox(
         'StyleSettings',
         array(
             'Banner' => _i18n('是否显示 Banner'),
+			'Title' => _i18n('是否显示站点标题'),
+			'Description' => _i18n('是否显示站点描述'),
         ),
-        array('Banner'),
+        array('Banner', 'Title', 'Description'),
         _i18n('主题样式设置')
     );
     $form->addInput($StyleSettings->multiMode());

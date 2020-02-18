@@ -30,6 +30,7 @@ class Lang_en
             '最新评论' => 'Latest comments',
             '站点概览' => 'Overview',
             '次浏览' => 'views',
+            '哔哩哔哩' => 'BiliBili',
 
 
             # Post
@@ -43,6 +44,7 @@ class Lang_en
             '支付宝支付' => 'Pay by AliPay',
             '微信支付' => 'Pay by WeChat',
             '没有了' => 'No More',
+            '发布日期' => 'Post date',
 
 
             # 评论 Comments
@@ -99,9 +101,13 @@ class Lang_en
             '格式：2017/11/02 11:31:29' => 'Format: 2017/11/02 11:31:29',
             '微信二维码' => 'WeChat payment QR code',
             '支付宝二维码' => 'Alipay payment QR code',
+            '自定义 CSS 代码' => 'Custom CSS Code',
             '需要 `style` 标签' => 'Need `style` tag',
+            '自定义 JS 代码（例如：Google 统计代码）' => 'Custom JS Code (eg：Google Analytics Code)',
             '不需要 `script` 标签' => 'No need for the `script` tag',
             '是否显示 Banner' => 'Whether to display Banner',
+			'是否显示站点标题' => 'Whether to display Site Title',
+            '是否显示站点描述' => 'Whether to display Site Description',
             '主题样式设置' => 'Theme style settings',
             '文章缩略图' => 'Article thumbnail',
             '彩带背景' => 'Ribbon background',
